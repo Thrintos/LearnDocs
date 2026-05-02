@@ -5,7 +5,8 @@ site_name: "Microsoft Security Study Notes"
 site_url: "https://microsoft-security-study-notes.github.io/"
 site_description: "A comprehensive collection of study notes and resources for Microsoft Security certifications, including SC-900, SC-200 and SC-300."
 site_author: "Daan van der Kruit"
-repo_url: ""
+repo_url: "https://github.com/Thrintos/LearnDocs"
+edit_uri: /edit/main/docs/
 repo_name: "GitHub"
 copyright: "&copy; 2026 — Study resource, not affiliated with Microsoft."
 
