@@ -59,13 +59,13 @@ nav:
   - Home: index.md
 
   - SC-900 Fundamentals:
-    - SC-900/index.md
-    - Module 1 -  Security Concepts: "SC-900/sc-900-security-concepts.md"
-    - Module 2 - Identity and Access: "SC-900/sc-900-identity-and-access.md"
-    - Module 3 - Security Solutions: "SC-900/sc-900-security-solutions.md"
-    - Module 4 - Compliance Solutions: "SC-900/sc-900-compliance-solutions.md"
-    - Glossary: "SC-900/sc-900-glossary.md"
-    - Practice Questions: "SC-900/sc-900-practice-questions.md"
+      - SC-900/index.md
+      - Module 1 - Security Concepts: "SC-900/sc-900-security-concepts.md"
+      - Module 2 - Identity and Access: "SC-900/sc-900-identity-and-access.md"
+      - Module 3 - Security Solutions: "SC-900/sc-900-security-solutions.md"
+      - Module 4 - Compliance Solutions: "SC-900/sc-900-compliance-solutions.md"
+      - Glossary: "SC-900/sc-900-glossary.md"
+      - Practice Questions: "SC-900/sc-900-practice-questions.md"
 
 # ─────────────────────────────────────────────
 #  Markdown Extensions
