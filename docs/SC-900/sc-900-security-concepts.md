@@ -35,7 +35,7 @@ The **Shared Responsibility Model** defines what Microsoft manages and what the 
 
 ### Six Pillars of Zero Trust
 
-- **Identities** → [[02 - Identity and Access]]
+- **Identities** → [Module 2 - Identity and Access](sc-900-identity-and-access.md)
 - **Devices** — Only compliant, managed devices access resources.
 - **Applications** — Discover all applications in use (shadow IT).
 - **Data** — Classify, label, and protect data.
@@ -49,8 +49,9 @@ The **Shared Responsibility Model** defines what Microsoft manages and what the 
 A layered security strategy where multiple controls protect against a breach at any single layer.
 
 **Layers (outside → inside):**
+
 1. Physical security
-2. Identity & access ([[02 - Identity and Access]])
+2. Identity & access ([Module 2 - Identity and Access](sc-900-identity-and-access.md))
 3. Perimeter (DDoS protection, firewalls)
 4. Network (segmentation, traffic filtering)
 5. Compute (secure VMs, endpoint protection)
