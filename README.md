@@ -47,7 +47,7 @@ Contributions are welcome and appreciated! Whether you've spotted a typo, found 
 
 6. **Push** your branch to your fork:
    ```bash
-   git push origin fix/description-of-your-change
+   git push
    ```
 
 7. **Open a Pull Request (PR)** on the original repository. Go to the original repo on GitHub, click **"Compare & pull request"**, fill in the PR template, and submit.
