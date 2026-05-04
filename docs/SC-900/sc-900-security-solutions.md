@@ -20,6 +20,16 @@ Microsoft Defender is a family of security products covering endpoints, cloud, i
 | **Defender for Cloud** | Azure workloads, servers, containers, databases |
 | **Microsoft 365 Defender** (now **Microsoft Defender XDR**) | Unified portal coordinating all above |
 
+```mermaid
+flowchart TB
+    XDR[Microsoft Defender XDR\nUnified Portal]
+    XDR --> EP[Defender for Endpoint\nWindows · macOS · Linux · Mobile]
+    XDR --> O365[Defender for Office 365\nEmail · Teams · SharePoint]
+    XDR --> ID[Defender for Identity\nOn-prem Active Directory]
+    XDR --> CA[Defender for Cloud Apps\nSaaS · Shadow IT]
+    XDR --> DC[Defender for Cloud\nAzure · AWS · GCP Workloads]
+```
+
 ---
 
 ## Microsoft Defender for Cloud
@@ -51,6 +61,17 @@ Protects **Azure, multi-cloud (AWS/GCP), and on-premises** workloads.
 - **Detect** — Uses built-in and custom analytics rules, ML, and threat intelligence.
 - **Investigate** — Incidents, timelines, and entity behavior graphs.
 - **Respond** — Automated playbooks (via Azure Logic Apps).
+
+```mermaid
+flowchart LR
+    A[Data Sources\nOffice 365 · Azure · Firewalls · CEF · Syslog] -->|Connectors| B[Collect\nLog Analytics Workspace]
+    B --> C[Detect\nAnalytics Rules · ML · Threat Intel]
+    C -->|Alert triggered| D[Incident Created]
+    D --> E[Investigate\nTimeline · Entity Graph · UEBA]
+    E --> F[Respond\nPlaybook via Logic Apps]
+    F -->|Auto-remediation| G([Threat Contained])
+    F -->|Escalate| H([Analyst Action])
+```
 
 ### Key Concepts
 

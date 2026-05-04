@@ -33,6 +33,17 @@ The **Shared Responsibility Model** defines what Microsoft manages and what the 
 2. **Use least privilege access** — Limit user access with Just-In-Time (JIT) and Just-Enough-Access (JEA).
 3. **Assume breach** — Minimize blast radius, segment access, and verify end-to-end encryption.
 
+```mermaid
+flowchart LR
+    A([User / Device]) --> B{Verify Explicitly\nIdentity · Location · Device · Risk}
+    B -->|Checks pass| C{Least Privilege\nJIT · JEA}
+    C -->|Minimal access granted| D[Resource]
+    B -->|Check fails| E[Block / MFA Challenge]
+    C -->|Excessive request| E
+    D --> F[Assume Breach\nMonitor · Segment · Encrypt]
+    F -->|Anomaly detected| E
+```
+
 ### Six Pillars of Zero Trust
 
 - **Identities** → [Module 2 - Identity and Access](sc-900-identity-and-access.md)
@@ -57,6 +68,19 @@ A layered security strategy where multiple controls protect against a breach at 
 5. Compute (secure VMs, endpoint protection)
 6. Application (secure APIs, no secrets in code)
 7. Data (encryption, access control)
+
+```mermaid
+flowchart TB
+    L1[🏢 Physical Security]
+    L2[🪪 Identity & Access]
+    L3[🛡️ Perimeter — DDoS · Firewall]
+    L4[🌐 Network — Segmentation · Filtering]
+    L5[💻 Compute — VMs · Endpoint Protection]
+    L6[📦 Application — Secure APIs]
+    L7[🔒 Data — Encryption · Access Control]
+
+    L1 --> L2 --> L3 --> L4 --> L5 --> L6 --> L7
+```
 
 > Each layer provides additional protection and slows down an attacker.
 
