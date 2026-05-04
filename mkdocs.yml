@@ -73,7 +73,11 @@ nav:
 markdown_extensions: 
   - admonition                  # Note / Warning / Tip callout boxes
   - pymdownx.details            # Collapsible sections
-  - pymdownx.superfences        # Code blocks inside admonitions etc.
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:  
       anchor_linenums: true
   - pymdownx.inlinehilite       # Inline code highlighting
