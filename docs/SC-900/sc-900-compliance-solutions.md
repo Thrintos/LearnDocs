@@ -65,6 +65,14 @@ Classifies and protects sensitive data using **sensitivity labels**.
 Identify → Classify → Protect → Monitor
 ```
 
+```mermaid
+flowchart LR
+    A[Identify\nScan for sensitive data] --> B[Classify\nApply sensitivity label]
+    B --> C[Protect\nEncrypt · Watermark · Restrict access]
+    C --> D[Monitor\nTrack label usage · Audit · DLP alerts]
+    D -->|New data discovered| A
+```
+
 ### Auto-labelling
 
 Labels can be automatically applied based on sensitive information types (credit card numbers, social security numbers, etc.).
@@ -114,6 +122,17 @@ Enables searching for and exporting content for legal, regulatory, or investigat
 | **Content Search** | Basic search across M365 services |
 | **eDiscovery (Standard)** | Create cases, export content, apply holds |
 | **eDiscovery (Premium)** | Advanced analytics, custodian management, review sets, communication threading |
+
+```mermaid
+flowchart LR
+    A([Legal / Investigation Need]) --> B{Scope}
+    B -->|Basic search & export| C[Content Search\nNo case management]
+    B -->|Case management + holds| D[eDiscovery Standard\nCases · Holds · Export]
+    B -->|Complex litigation| E[eDiscovery Premium\nCustodians · Review Sets\nAnalytics · Threading]
+    D --> F([Export to legal team])
+    E --> F
+    C --> F
+```
 
 ### Legal Hold
 
