@@ -69,7 +69,11 @@ nav:
   - SC-300 Identity and Access:
       - SC-300/index.md
       - Module 1 - User Identities: "SC-300/sc-300-user-identities.md"
-      -  Module 2 - Authentication and Access: "SC-300/sc-300-authentication-and-access.md"
+      - Module 2 - Authentication and Access: "SC-300/sc-300-authentication-and-access.md"
+      - Module 3 - Workload Identities: "SC-300/sc-300-workload-identities.md"
+      - Module 4 - Identity Governance: "SC-300/sc-300-identity-governance.md"
+      - Glossary: "SC-300/sc-300-glossary.md"
+      - Practice Questions: "SC-300/sc-300-practice-questions.md"
 
 # ─────────────────────────────────────────────
 #  Markdown Extensions
