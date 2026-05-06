@@ -66,6 +66,10 @@ nav:
       - Module 4 - Compliance Solutions: "SC-900/sc-900-compliance-solutions.md"
       - Glossary: "SC-900/sc-900-glossary.md"
       - Practice Questions: "SC-900/sc-900-practice-questions.md"
+  - SC-300 Identity and Access:
+      - SC-300/index.md
+      - Module 1 - User Identities: "SC-300/sc-300-user-identities.md"
+      -  Module 2 - Authentication and Access: "SC-300/sc-300-authentication-and-access.md"
 
 # ─────────────────────────────────────────────
 #  Markdown Extensions
@@ -73,7 +77,11 @@ nav:
 markdown_extensions: 
   - admonition                  # Note / Warning / Tip callout boxes
   - pymdownx.details            # Collapsible sections
-  - pymdownx.superfences        # Code blocks inside admonitions etc.
+  - pymdownx.superfences:       # Code blocks inside admonitions etc.
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:  
       anchor_linenums: true
   - pymdownx.inlinehilite       # Inline code highlighting
