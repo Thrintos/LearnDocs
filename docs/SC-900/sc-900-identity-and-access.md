@@ -83,6 +83,21 @@ Identity is the **new security perimeter**. In a cloud-first world, identity rep
 - Require compliant device
 - Require Entra ID joined device
 
+```mermaid
+flowchart LR
+    A([Sign-in Attempt]) --> B[Collect Signals\nUser · IP · Device · App · Risk]
+    B --> C{Policy Match?}
+    C -->|No matching policy| D[Grant Access]
+    C -->|Policy triggered| E{Controls Required}
+    E -->|MFA required| F[MFA Challenge]
+    E -->|Compliant device required| G{Device Compliant?}
+    E -->|Block| H[Access Denied]
+    F -->|Passed| D
+    F -->|Failed| H
+    G -->|Yes| D
+    G -->|No| H
+```
+
 > Requires **Entra ID P1** or higher.
 
 ---
@@ -132,6 +147,18 @@ Actions: block, require MFA, require password reset.
 - **Password Hash Synchronisation (PHS)** — Syncs password hashes to the cloud.
 - **Pass-through Authentication (PTA)** — Validates password against on-prem AD in real time.
 - **Federation (ADFS)** — Full federation with on-prem infrastructure.
+
+```mermaid
+flowchart LR
+    AD[On-Premises\nActive Directory]
+    EC[Entra Connect\nSync Agent]
+    EID[Microsoft Entra ID\nCloud]
+
+    AD --> EC
+    EC -->|Password Hash Sync PHS\nHashes synced to cloud| EID
+    EC -->|Pass-through Auth PTA\nPassword validated on-prem| EID
+    EC -->|Federation ADFS\nFull trust with on-prem IdP| EID
+```
 
 ---
 
